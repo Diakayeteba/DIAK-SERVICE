@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
 import { PRODUCTS, CATEGORIES, filterProducts } from '@/lib/products';
 
-const WA_NUMBER = '22384161965';
+const WA_NUMBER = '22375162416';
 const buildWaUrl = (productName, lang) => {
   const msg =
     lang === 'fr'
@@ -190,21 +190,20 @@ export default function ProduitsPage() {
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {/* Category badge */}
-                    <div className="absolute top-2 left-2 bg-primary/90 backdrop-blur-sm text-white text-xs px-2 py-0.5 rounded-full font-medium">
+                    {/* Category badge — coin bas gauche, discret */}
+                    <div className="absolute bottom-2 left-2 bg-primary/85 backdrop-blur-sm text-white text-xs px-2 py-0.5 rounded-full font-medium">
                       {getCategoryLabel(product.category)}
-                    </div>
-                    {/* Available badge */}
-                    <div className="absolute top-2 right-2 bg-green-500/90 text-white text-xs px-2 py-0.5 rounded-full font-medium">
-                      ✓
                     </div>
                   </div>
 
                   {/* Info */}
                   <div className="p-4 flex flex-col flex-1">
-                    <h3 className="font-bold text-gray-800 text-sm mb-1 group-hover:text-primary transition-colors leading-snug">
-                      {getProductName(product)}
-                    </h3>
+                    <div className="flex items-start gap-1.5 mb-1">
+                      <h3 className="font-bold text-gray-800 text-sm group-hover:text-primary transition-colors leading-snug flex-1">
+                        {getProductName(product)}
+                      </h3>
+                      <span className="flex-shrink-0 bg-green-100 text-green-600 text-xs px-1.5 py-0.5 rounded-full font-semibold mt-0.5">✓</span>
+                    </div>
                     <p className="text-xs text-gray-400 mb-3 leading-relaxed line-clamp-2 flex-1">
                       {getProductDesc(product)}
                     </p>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 
-const WA_NUMBER = '22384161965';
+const WA_NUMBER = '22375162416';
 
 export default function Footer() {
   const { t, lang } = useLanguage();
@@ -96,7 +96,7 @@ export default function Footer() {
                 <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <a href="tel:+22384161965" className="hover:text-white transition-colors">+223 84 16 19 65 / 96 93 32 01</a>
+                <a href="tel:+22375162416" className="hover:text-white transition-colors">+223 75 16 24 16 / 84 16 19 65</a>
               </li>
               <li className="flex items-center gap-3">
                 <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

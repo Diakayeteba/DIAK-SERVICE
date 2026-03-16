@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 
-const WHATSAPP_NUMBER = '22384161965';
+const WHATSAPP_NUMBER = '22375162416';
 
 export default function ContactSection() {
   const { t } = useLanguage();
@@ -36,8 +36,8 @@ export default function ContactSection() {
         </svg>
       ),
       label: t.contact.phone,
-      value: '+223 84 16 19 65 / 96 93 32 01',
-      href: 'tel:+22384161965',
+      value: '+223 75 16 24 16 / 84 16 19 65',
+      href: 'tel:+22375162416',
       color: 'bg-blue-100 text-blue-600',
     },
     {
@@ -47,7 +47,7 @@ export default function ContactSection() {
         </svg>
       ),
       label: t.contact.whatsapp,
-      value: '+223 84 16 19 65',
+      value: '+223 75 16 24 16',
       href: whatsappOrderUrl,
       color: 'bg-green-100 text-green-600',
     },
@@ -158,7 +158,7 @@ export default function ContactSection() {
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-base leading-tight">{t.contact.whatsappBtn}</p>
-                <p className="text-white/80 text-xs mt-0.5 truncate">+223 84 16 19 65 · Message pré-rempli</p>
+                <p className="text-white/80 text-xs mt-0.5 truncate">+223 75 16 24 16 · Message pré-rempli</p>
               </div>
               <svg className="w-5 h-5 text-white/70 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

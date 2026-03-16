@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { PRODUCTS, CATEGORIES } from '@/lib/products';
 
-const WA_NUMBER = '22384161965';
+const WA_NUMBER = '22375162416';
 const buildWaUrl = (productName, lang) => {
   const msg =
     lang === 'fr'
@@ -67,21 +67,23 @@ export default function ProductsSection() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
-                {/* Category badge */}
-                <div className="absolute top-2 left-2 bg-primary/85 backdrop-blur-sm text-white text-xs px-2 py-0.5 rounded-full font-medium">
+                {/* Category badge only — petit, coin bas gauche */}
+                <div className="absolute bottom-2 left-2 bg-primary/85 backdrop-blur-sm text-white text-xs px-2 py-0.5 rounded-full font-medium">
                   {getCategoryLabel(product.category)}
-                </div>
-                {/* Available badge */}
-                <div className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium shadow-sm">
-                  ✓ {t.products.available}
                 </div>
               </div>
 
               {/* Product info */}
               <div className="flex-1 flex flex-col">
-                <h3 className="font-bold text-gray-800 text-base mb-2 group-hover:text-primary transition-colors">
-                  {getProductName(product)}
-                </h3>
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="font-bold text-gray-800 text-base group-hover:text-primary transition-colors leading-tight flex-1">
+                    {getProductName(product)}
+                  </h3>
+                  {/* Available badge — déplacé à côté du titre */}
+                  <span className="flex-shrink-0 bg-green-100 text-green-700 text-xs px-1.5 py-0.5 rounded-full font-medium whitespace-nowrap">
+                    ✓
+                  </span>
+                </div>
                 <p className="text-sm text-gray-500 mb-4 leading-relaxed flex-1 line-clamp-2">
                   {getProductDesc(product)}
                 </p>

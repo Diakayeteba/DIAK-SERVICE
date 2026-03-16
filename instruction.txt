@@ -1,0 +1,400 @@
+Diakit-service
+# Objective
+
+Create a modern professional showcase website for a computer equipment and office supplies store located in Bamako, Mali.
+
+The website represents the store:
+
+DIAK-SERVICE  
+Owner: Abdoul-Kadry DIAKITE  
+Location: Marché Didida, Bamako – Mali
+
+The store sells computer equipment, office supplies, and workspace equipment at competitive prices.
+
+The goal of the website is to:
+
+- showcase available products
+- attract new customers
+- present the store professionally
+- allow customers to contact the store easily
+- increase local visibility
+
+The website must feel modern, professional and trustworthy.
+
+---
+
+# Context
+
+DIAK-SERVICE is a store located at Marché Didida in Bamako.
+
+The business specializes in selling:
+
+- Computers
+- Printers
+- Computer accessories
+- Office supplies
+- Stationery
+- Office equipment
+- Desk organization materials
+
+The store is known for:
+
+- competitive prices
+- availability of products
+- good customer service
+- local reputation
+
+Target audience:
+
+- students
+- businesses
+- schools
+- offices
+- entrepreneurs
+- individuals
+
+The website should communicate:
+
+- reliability
+- accessibility
+- affordability
+- product availability
+
+---
+
+# Technical Stack
+
+Framework: Next.js  
+Language: JavaScript  
+React version: 18  
+Styling: Tailwind CSS  
+Package manager: npm  
+
+Rules:
+
+- Do NOT use TypeScript
+- Use reusable components
+- Optimize images
+- Ensure responsive design
+- Clean architecture
+
+---
+
+# Language Requirements
+
+The website must be bilingual (FR / EN).
+
+French is the primary language.
+
+Every content must also have an English translation.
+
+Users must be able to switch between:
+
+FR → Français  
+EN → English
+
+Default language: French
+
+---
+
+# Project Structure
+
+/
+├── components
+│
+│   ├── Navbar
+│   ├── HeroSection
+│   ├── AboutSection
+│   ├── ProductsSection
+│   ├── CategoriesSection
+│   ├── WhyChooseUs
+│   ├── ContactSection
+│   └── Footer
+│
+├── pages
+│
+│   ├── index
+│   ├── produits
+│   └── contact
+│
+├── public
+│
+│   ├── images
+│   └── logo
+│
+└── styles
+
+---
+
+# Global Requirements
+
+The website must be:
+
+- fully responsive
+- mobile-first
+- modern and clean
+- fast loading
+- SEO friendly
+
+Animations must be simple and smooth.
+
+---
+
+# Design System
+
+## Color Palette
+
+Primary: #2563EB (technology blue)
+
+Secondary: #F59E0B (warm orange)
+
+Background: #F9FAFB
+
+Text: #111827
+
+Accent: #374151
+
+The design should evoke:
+
+- technology
+- modern retail
+- reliability
+- accessibility
+
+---
+
+# Typography
+
+Use a clean modern sans-serif font.
+
+Headings:
+
+Bold and readable.
+
+Body:
+
+Clear and simple.
+
+---
+
+# Pages and Components
+
+---
+
+# 1 HeroSection
+
+Purpose:
+
+Immediately present the store and what it sells.
+
+Headline example:
+
+FR:
+"Votre spécialiste en matériel informatique et fournitures de bureau à Bamako"
+
+EN:
+"Your trusted computer and office equipment store in Bamako"
+
+Subheadline:
+
+FR:
+"Ordinateurs, imprimantes, accessoires et fournitures de bureau à prix compétitifs."
+
+EN:
+"Computers, printers, accessories and office supplies at competitive prices."
+
+Buttons:
+
+FR: Voir les produits  
+EN: View products
+
+FR: Nous contacter  
+EN: Contact us
+
+Background image:
+
+Computer equipment or modern office workspace.
+
+---
+
+# 2 AboutSection
+
+Purpose:
+
+Introduce the store and the owner.
+
+Content includes:
+
+Store name: DIAK-SERVICE  
+Owner: Abdoul-Kadry DIAKITE  
+Location: Marché Didida – Bamako
+
+Description example:
+
+FR:
+
+"DIAK-SERVICE est un magasin spécialisé dans la vente de matériel informatique et de fournitures de bureau. Nous proposons une large gamme de produits à des prix compétitifs pour les particuliers, entreprises et étudiants."
+
+EN:
+
+"DIAK-SERVICE is a store specializing in computer equipment and office supplies. We offer a wide range of products at competitive prices for individuals, businesses and students."
+
+---
+
+# 3 CategoriesSection
+
+Purpose:
+
+Show main product categories.
+
+Categories include:
+
+- Ordinateurs / Computers
+- Imprimantes / Printers
+- Accessoires informatiques / Computer Accessories
+- Fournitures de bureau / Office Supplies
+- Papeterie / Stationery
+- Organisation de bureau / Office Organization
+
+Each category should display:
+
+- icon
+- image
+- title
+
+---
+
+# 4 ProductsSection
+
+Purpose:
+
+Show example products available in the store.
+
+Each product card includes:
+
+- product image
+- product name
+- short description
+- price (optional)
+
+Example products:
+
+Laptop  
+Desktop Computer  
+Printer  
+Keyboard  
+Mouse  
+USB Flash Drive  
+Notebook  
+Office chair
+
+Cards should include hover animation.
+
+---
+
+# 5 WhyChooseUs
+
+Purpose:
+
+Explain why customers should buy from DIAK-SERVICE.
+
+Example points:
+
+FR:
+
+✔ Prix compétitifs  
+✔ Large choix de produits  
+✔ Produits de qualité  
+✔ Service client disponible  
+
+EN:
+
+✔ Competitive prices  
+✔ Wide range of products  
+✔ Quality products  
+✔ Customer support
+
+---
+
+# 6 ContactSection
+
+Purpose:
+
+Allow customers to contact the store.
+
+Include:
+
+Phone number  
+WhatsApp contact  
+Email  
+Store location
+
+Address:
+
+Marché Didida  
+Bamako – Mali
+
+Add map integration if possible.
+
+---
+
+# Navigation
+
+Sticky navbar with:
+
+Accueil / Home  
+Produits / Products  
+Contact
+
+Include language switcher.
+
+---
+
+# Footer
+
+Include:
+
+Store description  
+Contact information  
+Location  
+Copyright
+
+Example:
+
+FR:
+
+"© DIAK-SERVICE – Tous droits réservés"
+
+EN:
+
+"© DIAK-SERVICE – All rights reserved"
+
+---
+
+# Assets
+
+Images should include:
+
+- computers
+- office equipment
+- printers
+- office workspace
+- stationery products
+
+Images must look modern and professional.
+
+---
+
+# Output Instructions
+
+Execute the instructions step-by-step.
+
+Create all files necessary for the project.
+
+Do not skip steps.
+
+Do not summarize instructions.
+
+Generate complete project structure and code.
+
+Ensure the website is responsive and production-ready.

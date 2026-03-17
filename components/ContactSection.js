@@ -4,7 +4,7 @@ import { useLanguage } from '@/context/LanguageContext';
 const WHATSAPP_NUMBER = '22375162416';
 
 export default function ContactSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
 
   const whatsappOrderUrl = useMemo(
@@ -14,18 +14,35 @@ export default function ContactSection() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
+  const [error, setError] = useState('');
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    if (error) setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    setTimeout(() => {
+    setError('');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setSent(true);
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        setError(data.error || 'Une erreur est survenue. Veuillez réessayer.');
+      }
+    } catch {
+      setError('Impossible d\'envoyer le message. Vérifiez votre connexion.');
+    } finally {
       setSending(false);
-      setSent(true);
-      setForm({ name: '', email: '', message: '' });
-    }, 1500);
+    }
   };
 
   const contactItems = [
@@ -173,6 +190,12 @@ export default function ContactSection() {
                   ✅
                 </div>
                 <p className="text-green-700 font-semibold text-lg">{t.contact.form.success}</p>
+                <button
+                  onClick={() => setSent(false)}
+                  className="text-sm text-primary underline hover:no-underline"
+                >
+                  {lang === 'fr' ? 'Envoyer un autre message' : 'Send another message'}
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -218,6 +241,16 @@ export default function ContactSection() {
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-gray-800 placeholder-gray-400 transition-all resize-none"
                   />
                 </div>
+                {/* Error message */}
+                {error && (
+                  <div className="flex items-start gap-2 bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-xl">
+                    <svg className="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    {error}
+                  </div>
+                )}
+
                 <button
                   type="submit"
                   disabled={sending}
